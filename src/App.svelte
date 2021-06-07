@@ -1,4 +1,5 @@
 <script lang="ts">
+  import GithubIcon from './components/GithubIcon.svelte';
   import MediaQuery from './components/MediaQuery.svelte';
   import Plates from './Plates.svelte';
 </script>
@@ -22,6 +23,8 @@
       <Plates total={5} />
     {/if}
   </MediaQuery>
+
+  <GithubIcon url="https://github.com/AkatQuas/zone-plate" />
 </main>
 
 <style>
@@ -32,7 +35,6 @@
 
   main {
     text-align: center;
-    padding: 1em;
     margin: 0 auto;
   }
 

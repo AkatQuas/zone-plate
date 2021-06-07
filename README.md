@@ -1,3 +1,5 @@
 # Zone Plate
 
-Just for preview zone plate.
+Just for [preview](https://akatquas.github.io/zone-plate/) zone plate.
+
+![zone plate](./screenshot.png)

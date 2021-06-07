@@ -2,4 +2,6 @@
 
 Just for [preview](https://akatquas.github.io/zone-plate/) zone plate.
 
-![zone plate](./screenshot.png)
+| Desktop | Mobile |
+|:-:|:-:|
+|![desktop](./screenshot.png)|![mobile](./mobileshot.png)|

@@ -1,20 +1,27 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import List from './components/List.svelte';
-  import { subscribe, next } from './plates';
-
-  let list: string[] = [];
-  subscribe((value) => {
-    list = value;
-  })
-
-	onMount(next);
+  import MediaQuery from './components/MediaQuery.svelte';
+  import Plates from './Plates.svelte';
 </script>
 
 <main>
   <h1>Hello <br />Zone Plate!</h1>
-  <button on:click={next}>Next Random</button>
-  <List list={list} />
+  <MediaQuery query="(min-width: 1281px)" let:matches>
+    {#if matches}
+      <Plates total={20} />
+    {/if}
+  </MediaQuery>
+
+  <MediaQuery query="(min-width: 481px) and (max-width: 1280px)" let:matches>
+    {#if matches}
+      <Plates total={10} />
+    {/if}
+  </MediaQuery>
+
+  <MediaQuery query="(max-width: 480px)" let:matches>
+    {#if matches}
+      <Plates total={5} />
+    {/if}
+  </MediaQuery>
 </main>
 
 <style>

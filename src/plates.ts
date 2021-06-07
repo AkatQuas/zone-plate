@@ -8,23 +8,16 @@ export const reset = () => {
   plates.set([]);
 };
 
-export const next = () => {
-  plates.set(randomPlates(20));
-};
-
-/**
- *
- * @param count
- * @returns
- */
-function randomPlates(count: number = 20): string[] {
+export const next = (total: number) => {
   const list: string[] = [];
-  for (let index = 0; index < count; index++) {
+  for (let index = 0; index < total; index++) {
     const one = randomOnePlate(list);
     list.push(one);
   }
-  return list;
-}
+
+  plates.set(list);
+};
+
 
 /**
  * @private
